@@ -1,3 +1,9 @@
 #image-logo img{
     width: 100px;
 }
+
+.icon-servicios:hover, .icon-services:focus{   
+    color: #AD005A !important;
+    transform: rotate(360deg);
+        -webkit-transition: -webkit-transform 1s ease-in;
+}
