@@ -262,21 +262,21 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
-          <h2 class="text-white mt-0">¡Estamos a un toque!</h2>
+          <h2 class="text-white mt-0" id="contact-title">¡Estamos a un toque!</h2>
           <hr class="divider my-4">
-          <p class="text-white mb-5">¿Estás listo para empezar este proyecto con nosotros? Contáctamos y estaremos
+          <p class="text-white mb-5"  id="contact-description">¿Estás listo para empezar este proyecto con nosotros? Contáctamos y estaremos
             trabajando contigo lo más pronto posible</p>
         </div>
       </div>
       <div class="row">
-        <div class="col-lg-4 ml-auto text-center">
+        <div class="col-lg-4 ml-auto text-center contactos">
           <a href="https://wa.me/+5491122547749" target="_blank" class="text-white">
             <i class="fab fa-whatsapp fa-3x mb-3 text-white"></i>
             <div>Envíanos un Whatsapp</div>
             <div>+54 (911) 22 547749</div>
           </a>
         </div>
-        <div class="col-lg-4 mr-auto text-center">
+        <div class="col-lg-4 mr-auto text-center contactos">
           <a class="d-block text-white" href="mailto:info@codego-soluciones.com">
             <i class="fas fa-envelope fa-3x mb-3 text-white"></i>
             <div>Escríbenos un Correo</div>
@@ -367,7 +367,7 @@
     $(document).ready(function () {
       $(window).scroll(function () {
         portada = document.getElementById('portada');
-        nosotros = document.getElementById('nosotros');
+        nosotros = document.getElementById('about');
         services = document.getElementById('services');
         contact = document.getElementById('contact');
 
@@ -376,13 +376,19 @@
         }
 
         if (esVisible(nosotros) == true) {
-          animateCSS('#nosotros-title', 'faceInDown');
-          animateCSS('#nosotros-descripcion', 'faceInUp');
+          animateCSS('#nosotros-title', 'jackInTheBox');
+          animateCSS('#nosotros-descripcion', 'zoomIn');
         }
 
         if (esVisible(services) == true) {
           animateCSS('.icon-servicios', 'rotateIn');
           animateCSS('#ofrecemos-title', 'lightSpeedIn');
+        }
+
+        if (esVisible(contact) == true) {
+          animateCSS('.contactos', 'jackInTheBox');
+          animateCSS('#contact-title', 'zoomIn');
+          animateCSS('#contact-description', 'slideInUp');
         }
 
       });
