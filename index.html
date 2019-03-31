@@ -104,7 +104,11 @@
           <hr class="divider my-4">
         </div>
         <div class="col-lg-8 align-self-baseline">
+<<<<<<< HEAD
           <p class="text-white-75 font-weight-light mb-5 fast animated bounceInLeft" id="descripcion">¿Necesitas proyección en la
+=======
+          <p class="text-white-75 font-weight-light mb-5 fast" id="descripcion">¿Necesitas proyección en la
+>>>>>>> a15b17f96d77410b9fc83272329433c707490ec4
             web? </br>Nosotros tenemos lo que buscas. Diseños 100% adaptados a tu negocio, sitios web potentes y
             estrategias de posicionamiento que harán que tu marca se proyecte.</p>
           <a class="btn btn-primary btn-xl js-scroll-trigger" href="https://wa.me/+5491122547749" target="_blank">COTIZA
@@ -119,9 +123,15 @@
     <div class="container">
       <div class="row justify-content-center" id="nosotros">
         <div class="col-lg-8 text-center">
+<<<<<<< HEAD
           <h2 class="text-white mt-0 slow" id="nosotros-title">Nosotros</h2>
           <hr class="divider light my-4">
           <p class="text-white-50 mb-4 slow" id="nosotros-descripcion">Somos un equipo de diseñadores y desarrolladores
+=======
+          <h2 class="text-white mt-0 fast" id="nosotros-title">Nosotros</h2>
+          <hr class="divider light my-4">
+          <p class="text-white-50 mb-4 fast" id="nosotros-descripcion">Somos un equipo de diseñadores y desarrolladores
+>>>>>>> a15b17f96d77410b9fc83272329433c707490ec4
             con alta experiencia y pasión
             por el diseño web. Nos enfocamos en usar herramientas de calidad que permitan que tu sitio web se mantenga
             en el tiempo. Ofrecemos desarrollos de calidad para hacer crecer tu negocio, porque tu crecimiento es el
@@ -136,7 +146,11 @@
   <!-- Services Section -->
   <section class="page-section" id="services">
     <div class="container">
+<<<<<<< HEAD
       <h2 class="text-center mt-0 slow" id="ofrecemos-title">Ofrecemos</h2>
+=======
+      <h2 class="text-center mt-0 fast" id="ofrecemos-title">Ofrecemos</h2>
+>>>>>>> a15b17f96d77410b9fc83272329433c707490ec4
       <hr class="divider my-4">
       <div class="row">
         <div class="col-lg-3 col-md-6 text-center">
@@ -262,21 +276,35 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8 text-center">
+<<<<<<< HEAD
           <h2 class="text-white mt-0 slow" id="contact-title">¡Estamos a un toque!</h2>
           <hr class="divider my-4">
           <p class="text-white mb-5 slow"  id="contact-description">¿Estás listo para empezar este proyecto con nosotros? Contáctamos y estaremos
+=======
+          <h2 class="text-white mt-0" id="contact-title">¡Estamos a un toque!</h2>
+          <hr class="divider my-4">
+          <p class="text-white mb-5"  id="contact-description">¿Estás listo para empezar este proyecto con nosotros? Contáctamos y estaremos
+>>>>>>> a15b17f96d77410b9fc83272329433c707490ec4
             trabajando contigo lo más pronto posible</p>
         </div>
       </div>
       <div class="row">
+<<<<<<< HEAD
         <div class="col-lg-4 ml-auto text-center slow contactos">
+=======
+        <div class="col-lg-4 ml-auto text-center contactos">
+>>>>>>> a15b17f96d77410b9fc83272329433c707490ec4
           <a href="https://wa.me/+5491122547749" target="_blank" class="text-white">
             <i class="fab fa-whatsapp fa-3x mb-3 text-white"></i>
             <div>Envíanos un Whatsapp</div>
             <div>+54 (911) 22 547749</div>
           </a>
         </div>
+<<<<<<< HEAD
         <div class="col-lg-4 mr-auto text-center slow contactos">
+=======
+        <div class="col-lg-4 mr-auto text-center contactos">
+>>>>>>> a15b17f96d77410b9fc83272329433c707490ec4
           <a class="d-block text-white" href="mailto:info@codego-soluciones.com">
             <i class="fas fa-envelope fa-3x mb-3 text-white"></i>
             <div>Escríbenos un Correo</div>
@@ -350,6 +378,7 @@
         obj.classList.add('animated', animationName)
       });
 
+<<<<<<< HEAD
 
     }
 
@@ -363,6 +392,36 @@
         if (esVisible(nosotros) == true) {
             animateCSS('#nosotros-title', 'jackInTheBox');
             animateCSS('#nosotros-descripcion', 'zoomIn');
+=======
+      function handleAnimationEnd() {
+        $(element).each(function (i, obj) {
+          obj.classList.remove('animated', animationName)
+          obj.removeEventListener('animationend', handleAnimationEnd)
+        });
+
+        if (typeof callback === 'function') callback()
+      }
+      $(element).each(function (i, obj) {
+        obj.addEventListener('animationend', handleAnimationEnd)
+      });
+
+    }
+
+    $(document).ready(function () {
+      $(window).scroll(function () {
+        portada = document.getElementById('portada');
+        nosotros = document.getElementById('about');
+        services = document.getElementById('services');
+        contact = document.getElementById('contact');
+
+        if (esVisible(portada) == true) {
+          animateCSS('#descripcion', 'bounceInLeft');
+        }
+
+        if (esVisible(nosotros) == true) {
+          animateCSS('#nosotros-title', 'jackInTheBox');
+          animateCSS('#nosotros-descripcion', 'zoomIn');
+>>>>>>> a15b17f96d77410b9fc83272329433c707490ec4
         }
 
         if (esVisible(services) == true) {
@@ -371,9 +430,15 @@
         }
 
         if (esVisible(contact) == true) {
+<<<<<<< HEAD
             animateCSS('.contactos', 'jackInTheBox');
             animateCSS('#contact-title', 'zoomIn');
             animateCSS('#contact-description', 'slideInUp');
+=======
+          animateCSS('.contactos', 'jackInTheBox');
+          animateCSS('#contact-title', 'zoomIn');
+          animateCSS('#contact-description', 'slideInUp');
+>>>>>>> a15b17f96d77410b9fc83272329433c707490ec4
         }
 
       });
